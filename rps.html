@@ -20,15 +20,20 @@
     <div id="score">Player: 0<br>Computer: 0<br>Total: 0</div>
     <h3>Let's Play</h3>
     <h2>Rock, Paper, Scissors</h2>
-        <div class="row-md">
-          <div class="btn-group btn-group-lg" role="group" aria-label="Make your choice">
-            <button type="button" class="btn btn-default" onclick="playerChoice('rock')">Rock</button>
-            <button type="button" class="btn btn-default" onclick="playerChoice('paper')">Paper</button>
-            <button type="button" class="btn btn-default" onclick="playerChoice('scissors')">Scissors</button>
-          </div>
-        </div>
-      <p id="compChoice"></p>
-      <p id="result"></p>
+    <div class="row-md">
+      <div class="btn-group btn-group-lg" role="group" aria-label="Make your choice">
+        <button id="btn-rock" type="button" class="btn btn-default" onclick="playerChoice('rock')">Rock</button>
+        <button id="btn-paper" type="button" class="btn btn-default" onclick="playerChoice('paper')">Paper</button>
+        <button id="btn-scissors" type="button" class="btn btn-default" onclick="playerChoice('scissors')">Scissors</button>
+      </div>
+    </div>
+    <p>
+      <button id="btn-reset" type="button" class="btn btn-danger" onclick="resetGame()">Reset Game</button>
+    </p>
+    <p id="comp-choice"></p>
+    <p id="result"></p>
+    <h2 id="game-end-message"></h2>
+  </div>
 
   <script src="rps.js"></script>
 </body>
