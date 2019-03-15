@@ -1,13 +1,9 @@
-// while (playerScore < 5 || computerScore < 5) {
-
   var playerScore = 0
   var computerScore = 0
   var totalGames = 0
   function playerChoice(player) {
-      // alert(str)
       var hand = ["rock", "paper", "scissors"]
       var randNum = Math.floor(Math.random() * 3)
-      // console.log(randNum)
       var computer = hand[randNum]
       document.getElementById("compChoice").innerHTML = `I picked ${computer}.`
       if (player == computer) {
@@ -22,17 +18,5 @@
         playerScore++
       }
       totalGames++
-      // console.log(`playerScore: ${playerScore}`)
-      // console.log(`computerScore: ${computerScore}`)
-      // console.log(`totalGames: ${totalGames}`)
       document.getElementById("score").innerHTML = `Player: ${playerScore}<br>Computer: ${computerScore}<br>Total: ${totalGames}`
     }
-// }
-
-/*
-num1 = 5 #ruby
-var num2 = 7 // javascript
-
-
-
-*/
