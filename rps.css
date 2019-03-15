@@ -2,19 +2,6 @@ button {
   /* display: inline; */
 }
 
-/* .score {
-  background-color: green;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  border-width: 5px;
-  border-color: white;
-  top: 50;
-  left: 50;
-  position: absolute;
-  z-index: 2;
-} */
-
 .btn-group {
   margin: 50px;
 }
