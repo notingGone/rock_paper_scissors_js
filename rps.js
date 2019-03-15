@@ -19,7 +19,7 @@ function playerChoice(player) {
   }
   totalGames++
   document.getElementById("score").innerHTML = `Player: ${playerScore}<br>Computer: ${computerScore}<br>Total: ${totalGames}`
-  if (playerScore == 5 || computerScore == 5) {
+  if ((playerScore == 3 || computerScore == 3 || totalGames >= 5) && playerScore != computerScore) {
     // var rpsButtons = document.getElementsByClassName("btn-default")
     // var i
     // for (i = 0; i < rpsButtons.length; i++) {
@@ -28,11 +28,11 @@ function playerChoice(player) {
     document.getElementById("btn-rock").disabled = true
     document.getElementById("btn-paper").disabled = true
     document.getElementById("btn-scissors").disabled = true
-    if (playerScore == 5) {
-      gameEndMessage = "Congradulations, you won 5 games.<br>Humans cheat."
+    if (playerScore > computerScore) {
+      gameEndMessage = "Congratulations, you won best of 5 games.<br>Humans cheat."
     }
     else {
-      gameEndMessage = "Sorry, Computer won 5 games.<br>Machines are superior to humans."
+      gameEndMessage = "Sorry, Computer won best of 5 games.<br>Machines are superior to humans."
     }
     document.getElementById("game-end-message").innerHTML = gameEndMessage
   }
@@ -44,6 +44,9 @@ function resetGame() {
   // for (i = 0; i < rpsButtons.length; i++) {
   //   rpsButtons[i].disabled = false
   // }
+  playerScore = 0
+  computerScore = 0
+  totalGames = 0
   document.getElementById("btn-rock").disabled = false
   document.getElementById("btn-paper").disabled = false
   document.getElementById("btn-scissors").disabled = false
